@@ -1,1 +1,65 @@
-Holadfghj
+<html>
+	<head>
+		STAR WARS
+	</head>
+	<table> 
+		<tr> 
+			<th>Nombre</th> 
+			<th>Año de lanzamiento</th>
+			<th>Director</th>
+			<th>Productores</th>
+			<th>Número de episodio</th>
+		</tr> 
+		<tr> 
+			<td><%= link_to @episodio_1['title'], pelicula_path(4)%> <br></td>
+			<td><%= @episodio_1['release_date']%> <br></td>
+			<td><%= @episodio_1['director']%> <br></td>
+			<td><%= @episodio_1['producer']%> <br></td>
+			<td><%= @episodio_1['episode_id']%> <br></td>
+		</tr>
+		<tr> 
+			<td><%= link_to @episodio_2['title'], pelicula_path(5)%> <br></td>
+			<td><%= @episodio_2['release_date']%> <br></td>
+			<td><%= @episodio_2['director']%> <br></td>
+			<td><%= @episodio_2['producer']%> <br></td>
+			<td><%= @episodio_2['episode_id']%> <br></td>
+		</tr> 
+		<tr> 
+			<td><%= link_to @episodio_3['title'], pelicula_path(6)%> <br></td>
+			<td><%= @episodio_3['release_date']%> <br></td>
+			<td><%= @episodio_3['director']%> <br></td>
+			<td><%= @episodio_3['producer']%> <br></td>
+			<td><%= @episodio_3['episode_id']%> <br></td>
+		</tr> 
+		<tr> 
+			<td><%= link_to @episodio_4['title'], pelicula_path(1)%> <br></td>
+			<td><%= @episodio_4['release_date']%> <br></td>
+			<td><%= @episodio_4['director']%> <br></td>
+			<td><%= @episodio_4['producer']%> <br></td>
+			<td><%= @episodio_4['episode_id']%> <br></td>
+		</tr> 
+		<tr> 
+			<td><%= link_to @episodio_5['title'], pelicula_path(2)%> <br></td>
+			<td><%= @episodio_5['release_date']%> <br></td>
+			<td><%= @episodio_5['director']%> <br></td>
+			<td><%= @episodio_5['producer']%> <br></td>
+			<td><%= @episodio_5['episode_id']%> <br></td>
+		</tr> 
+		<tr> 
+			<td><%= link_to @episodio_6['title'], pelicula_path(3)%> <br></td>
+			<td><%= @episodio_6['release_date']%> <br></td>
+			<td><%= @episodio_6['director']%> <br></td>
+			<td><%= @episodio_6['producer']%> <br></td>
+			<td><%= @episodio_6['episode_id']%> <br></td>
+		</tr> 
+		<tr> 
+			<td><%= link_to @episodio_7['title'], pelicula_path(7)%> <br></td>
+			<td><%= @episodio_7['release_date']%> <br></td>
+			<td><%= @episodio_7['director']%> <br></td>
+			<td><%= @episodio_7['producer']%> <br></td>
+			<td><%= @episodio_7['episode_id']%> <br></td>
+		</tr> 
+		
+	</table>
+	
+</html>
