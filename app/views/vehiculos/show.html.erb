@@ -1,0 +1,38 @@
+<html>
+	<p><strong>Nombre:</strong>
+	<%= @vehiculo['name']%></p>
+	<p><strong>Peliculas:</strong> <br/>
+	<% @cine.each do |i| %>
+  	<%= link_to i['title'], pelicula_path(i['url'].split(//).map {|x| x[/\d+/]}.compact.join("").to_i) %> <br/>
+	<% end %> </p>
+	<p><strong>Capacidad de Carga:</strong>
+	<%= @vehiculo['cargo_capacity']%></p>
+	<p><strong>Consumibles:</strong>
+	<%= @vehiculo['consumables']%></p>
+	<p><strong>Costo:</strong>
+	<%= @vehiculo['cost_in_credits']%></p>
+	<p><strong>Pilotos:</strong> <br/>
+	<% @cabros.each do |i| %>
+  	<%= link_to i['name'], personaje_path(i['url'].split(//).map {|x| x[/\d+/]}.compact.join("").to_i) %> <br/>
+	<% end %> </p>
+	<p><strong>Equipo a bordo:</strong>
+	<%= @vehiculo['crew']%></p>
+	<p><strong>Largo:</strong>
+	<%= @vehiculo['length']%></p>
+	<p><strong>Velocidad máxima atmosférica:</strong>
+	<%= @vehiculo['max_atmosphering_speed']%></p>
+	<p><strong>Modelo:</strong>
+	<%= @vehiculo['model']%></p>
+	<p><strong>Número de pasajeros:</strong>
+	<%= @vehiculo['passengers']%></p>
+	<p><strong>Clase:</strong>
+	<%= @vehiculo['vehicle_class']%></p>
+	<p><strong>Elaborado por:</strong>
+	<%= @vehiculo['manufacturer']%></p>
+	<p><strong>Creado:</strong>
+	<%= @vehiculo['created']%></p>
+	<p><strong>Editado:</strong>
+	<%= @vehiculo['edited']%></p>
+	<p><strong>URL:</strong>
+	<%= @vehiculo['url']%></p>
+</html>

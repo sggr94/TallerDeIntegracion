@@ -1,0 +1,42 @@
+<html>
+	<p><strong>Nombre:</strong>
+	<%= @estrella['name']%></p>
+	<p><strong>Peliculas:</strong> <br/>
+	<% @cine.each do |i| %>
+  	<%= link_to i['title'], pelicula_path(i['url'].split(//).map {|x| x[/\d+/]}.compact.join("").to_i) %> <br/>
+	<% end %> </p>
+	<p><strong>MGLT:</strong>
+	<%= @estrella['MGLT']%></p>
+	<p><strong>Capacidad de Carga:</strong>
+	<%= @estrella['cargo_capacity']%></p>
+	<p><strong>Consumibles:</strong>
+	<%= @estrella['consumables']%></p>
+	<p><strong>Costo:</strong>
+	<%= @estrella['cost_in_credits']%></p>
+	<p><strong>Pilotos:</strong> <br/>
+	<% @cabros.each do |i| %>
+  	<%= link_to i['name'], personaje_path(i['url'].split(//).map {|x| x[/\d+/]}.compact.join("").to_i) %> <br/>
+	<% end %> </p>
+	<p><strong>Equipo a bordo:</strong>
+	<%= @estrella['crew']%></p>
+	<p><strong>Puntaje Hyperdrive:</strong>
+	<%= @estrella['hyperdrive_rating']%></p>
+	<p><strong>Largo:</strong>
+	<%= @estrella['length']%></p>
+	<p><strong>Velocidad máxima atmosférica:</strong>
+	<%= @estrella['max_atmosphering_speed']%></p>
+	<p><strong>Modelo:</strong>
+	<%= @estrella['model']%></p>
+	<p><strong>Número de pasajeros:</strong>
+	<%= @estrella['passengers']%></p>
+	<p><strong>Clase:</strong>
+	<%= @estrella['starship_class']%></p>
+	<p><strong>Elaborado por:</strong>
+	<%= @estrella['manufacturer']%></p>
+	<p><strong>Creado:</strong>
+	<%= @estrella['created']%></p>
+	<p><strong>Editado:</strong>
+	<%= @estrella['edited']%></p>
+	<p><strong>URL:</strong>
+	<%= @estrella['url']%></p>
+</html>

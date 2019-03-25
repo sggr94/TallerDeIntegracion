@@ -1,0 +1,39 @@
+<html>
+	<p><strong>Nombre:</strong>
+	<%= @planeta['name']%></p>
+	<p><strong>Peliculas:</strong> <br/>
+	<% @cine.each do |i| %>
+  	<%= link_to i['title'], pelicula_path(i['url'].split(//).map {|x| x[/\d+/]}.compact.join("").to_i) %> <br/>
+	<% end %> </p>
+	<p><strong>Clima:</strong>
+	<%= @planeta['climate']%></p>
+	<p><strong>Gravedad:</strong>
+	<%= @planeta['gravity']%></p>
+	<p><strong>Diámetro:</strong>
+	<%= @planeta['diameter']%></p>
+	<p><strong>Nùmero de habitantes:</strong>
+	<%= @planeta['population']%></p>
+	<p><strong>Residentes:</strong> <br/>
+	<% @cabros.each do |i| %>
+  	<%= link_to i['name'], personaje_path(i['url'].split(//).map {|x| x[/\d+/]}.compact.join("").to_i) %> <br/>
+	<% end %> </p>
+	<p><strong>Perido Orbital:</strong>
+	<%= @planeta['orbital_period']%></p>
+	<p><strong>Perido de Rotacion:</strong>
+	<%= @planeta['rotation_period']%></p>
+	<p><strong>Superficie Acuática:</strong>
+	<%= @planeta['surface_water']%></p>
+	<p><strong>Tipo de Terreno:</strong>
+	<%= @planeta['terrain']%></p>
+	<p><strong>Creado:</strong>
+	<%= @planeta['created']%></p>
+	<p><strong>Editado:</strong>
+	<%= @planeta['edited']%></p>
+	<p><strong>URL:</strong>
+	<%= @planeta['url']%></p>
+</html>
+
+
+
+
+    

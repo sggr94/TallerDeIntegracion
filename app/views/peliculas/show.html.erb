@@ -15,12 +15,18 @@
 	<%= @pelicula['edited']%></p>
 	<p><strong>Introducción:</strong>
 	<%= @pelicula['opening_crawl']%></p>
-	<p><strong>Personajes:</strong>
-	<%= @pelicula['characters']%></p>
-	<p><strong>Planetas:</strong>
-	<%= @pelicula['planets']%></p>
-	<p><strong>Estrellas Espaciales:</strong>
-	<%= @pelicula['starships']%></p>
+	<p><strong>Personajes:</strong> <br/>
+	<% @cabros.each do |i| %>
+  	<%= link_to i['name'], personaje_path(i['url'].split(//).map {|x| x[/\d+/]}.compact.join("").to_i) %> <br/>
+	<% end %> </p>
+	<p><strong>Planetas:</strong> <br/>
+	<% @mundos.each do |j| %>
+  	<%= link_to j['name'], planeta_path(j['url'].split(//).map {|x| x[/\d+/]}.compact.join("").to_i) %> <br/>
+	<% end %> </p>
+	<p><strong>Estrellas Espaciales:</strong> <br/>
+	<% @muerte.each do |k| %>
+  	<%= link_to k['name'], estrella_path(k['url'].split(//).map {|x| x[/\d+/]}.compact.join("").to_i)  %>  <br/>
+	<% end %> </p>
 	<p><strong>URL:</strong>
 	<%= @pelicula['url']%></p>
 </html>

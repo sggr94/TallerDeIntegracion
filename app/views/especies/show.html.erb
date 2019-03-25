@@ -1,0 +1,36 @@
+<html>
+	<p><strong>Nombre:</strong>
+	<%= @especie['name']%></p>
+	<p><strong>Peliculas:</strong> <br/>
+	<% @cine.each do |i| %>
+  	<%= link_to i['title'], pelicula_path(i['url'].split(//).map {|x| x[/\d+/]}.compact.join("").to_i) %> <br/>
+	<% end %> </p>
+	<p><strong>Personas:</strong> <br/>
+	<% @cabros.each do |i| %>
+  	<%= link_to i['name'], personaje_path(i['url'].split(//).map {|x| x[/\d+/]}.compact.join("").to_i) %> <br/>
+	<% end %> </p>
+	<p><strong>Tiempo Medio de Vida:</strong>
+	<%= @especie['average_lifespan']%></p>
+	<p><strong>Estatura Promedio:</strong>
+	<%= @especie['average_height']%></p>
+	<p><strong>Clasificación:</strong> <br/>
+	<%= @especie['classification']%></p>
+	<p><strong>Designacion:</strong>
+	<%= @especie['designation']%></p>
+	<p><strong>Color(es) de ojo(s):</strong>
+	<%= @especie['eye_colors']%></p>
+	<p><strong>Color(es) de pelo:</strong>
+	<%= @especie['hair_colors']%></p>
+	<p><strong>Planeta de Origen:</strong>
+	<%= @especie['homeworld']%></p>
+	<p><strong>Lenguaje:</strong>
+	<%= @especie['language']%></p>
+	<p><strong>Color(es) de piel:</strong>
+	<%= @especie['skin_colors']%></p>
+	<p><strong>Creado:</strong>
+	<%= @especie['created']%></p>
+	<p><strong>Editado:</strong>
+	<%= @especie['edited']%></p>
+	<p><strong>URL:</strong>
+	<%= @especie['url']%></p>
+</html>
